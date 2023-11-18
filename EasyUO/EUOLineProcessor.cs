@@ -16,13 +16,8 @@
                                     Array.Empty<string>());
 
             string[] valueSplit = value.Split(' ');
-
-            if (valueSplit.Length == 0)
-                return ProcessValue(value,
-                                        Array.Empty<string>());
-            else
-                return ProcessValue(value, 
-                                    valueSplit);
+            return ProcessValue(value, 
+                                valueSplit);
         }
 
         protected abstract IStatement ProcessValue(string? value, string[] valueSplit);

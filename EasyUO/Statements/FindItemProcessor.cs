@@ -1,16 +1,6 @@
 ﻿namespace EasyRE.EasyUO
 {
-    public class FindItemStatement : IStatement
-    {
-        public string? Container { get; }
-        public string Item { get; }
-
-        public FindItemStatement(string? container, string item)
-        {
-            Container = container;
-            Item = item;
-        }
-    }
+    public record class FindItemStatement(string? Container, string Item) : IStatement;
 
     public class FindItemProcessor : EUOLineProcessor
     {
