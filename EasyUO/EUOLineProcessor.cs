@@ -9,18 +9,18 @@
             Key = key;
         }
 
-        public IStatement ProcessValue(string? value)
+        public IStatement ProcessLine(string? value)
         {
             if (string.IsNullOrEmpty(value))
-                return ProcessValue(value, 
+                return ProcessLine(value, 
                                     Array.Empty<string>());
 
             string[] valueSplit = value.Split(' ');
-            return ProcessValue(value, 
+            return ProcessLine(value, 
                                 valueSplit);
         }
 
-        protected abstract IStatement ProcessValue(string? value, string[] valueSplit);
+        protected abstract IStatement ProcessLine(string? value, string[] valueSplit);
 
         protected virtual void Error(string error)
         {

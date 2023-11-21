@@ -9,7 +9,7 @@
 
         }
 
-        protected override IStatement ProcessValue(string? value, string[] valueSplit)
+        protected override IStatement ProcessLine(string? value, string[] valueSplit)
         {
             if (string.IsNullOrEmpty(value) || valueSplit.Length < 1)
                 Error("GoSub needs atleast 1 parameter");

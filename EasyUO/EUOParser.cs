@@ -103,7 +103,7 @@ namespace EasyRE.EasyUO
             if (!_processors.TryGetValue(key.ToLower(), out EUOLineProcessor? processor))
                 return null;
 
-            return processor.ProcessValue(value);
+            return processor.ProcessLine(value);
         }
 
         string StripComments(string line)

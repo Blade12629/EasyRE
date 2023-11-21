@@ -8,7 +8,7 @@
         {
         }
 
-        protected override IStatement ProcessValue(string? value, string[] valueSplit)
+        protected override IStatement ProcessLine(string? value, string[] valueSplit)
         {
             if (string.IsNullOrEmpty(value) || valueSplit.Length < 2)
                 Error("Set needs atleast 2 parameters");
