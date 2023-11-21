@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EasyRE.EasyUO.Statements;
 
 namespace EasyRE.EasyUO
 {
@@ -77,6 +76,10 @@ namespace EasyRE.EasyUO
 
             if (string.IsNullOrEmpty(line))
                 return null;
+
+            // handle methods
+            if (line[0] == '_')
+                line = line.Insert(1, " ");
 
             IStatement? statement = null;
             int spaceIndex = line.IndexOf(' ');
